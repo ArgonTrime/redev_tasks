@@ -7,7 +7,6 @@
 let pinCheck = (pin) => {
 
     let pinArr = pin.split('');
-    console.log(pinArr);
 
     for(let i = 0; i < pinArr.length; i++) {
         if(isNaN(pinArr[i])) {
