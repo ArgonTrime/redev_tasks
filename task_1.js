@@ -23,3 +23,18 @@ let findNextSquare = (sq) => {
 findNextSquare(121);
 findNextSquare(625);
 findNextSquare(114);
+
+let findNextSquareParam = (sq, next = 1) => {
+    if( !Number.isInteger(Math.sqrt(sq)) ) {
+        return console.log(`-1 since ${sq} is not a perfect`);
+    }
+
+    let sqNew = Math.sqrt(sq) + next;
+
+    return console.log(sqNew * sqNew);
+
+};
+
+findNextSquareParam(121);
+findNextSquareParam(121, 15);
+findNextSquareParam(114);
