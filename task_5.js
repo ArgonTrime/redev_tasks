@@ -7,18 +7,13 @@
 let pinCheck = (pin) => {
 
     let pinArr = pin.split('');
+    console.log(pinArr);
 
-    for(let i = 0; i < pinArr.length; i++) {
-        if(isNaN(pinArr[i])) {
-            return false;
-        }
-    }
+    let check = pinArr.find(item => {
+        return item.match(/\D/) ? false : true;
+    });
 
-    if(pinArr.length == 4 || pinArr.length == 6) {
-        return true;
-    } else {
-        return false;
-    }
+    return ((pinArr.length == 4 || pinArr.length == 6) && check) ? true : false;
 };
 
 pinCheck('1234');
