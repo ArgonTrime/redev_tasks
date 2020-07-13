@@ -7,13 +7,8 @@
 let accum = (str) => {
     let arrStr = str.toLowerCase().split('');
 
-    for(let i = 0; i < arrStr.length; i++) {
-        arrStr[i] = arrStr[i].padStart(i + 1, arrStr[i]);
-    }
-
-    console.log(arrStr.map(item => item[0].toUpperCase() + item.slice(1)).join('-'));
+    return `${arrStr.map((item, i) => item[0].toUpperCase() + item.repeat(i)).join('-')}`;
 };
-
 
 accum("abcd");
 accum("RqaEzty");
