@@ -1,7 +1,7 @@
 'use strict';
 
 let polindromDetected = (str) => {
-    return (str.split('').reverse().join('') === str) ? true : false;
+    return str.split('').reverse().join('') === str;
 };
 
 polindromDetected('test');
